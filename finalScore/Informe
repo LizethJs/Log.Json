@@ -1,0 +1,65 @@
+Informe:
+
+ El objetivo de este análisis es obtener información de archivos de registro incorrectos de servidores web, analizarlos con expresiones regulares y crear gráficos que faciliten la visualización de hábitos de tráfico y de comportamiento de las peticiones. Usamos Python con las librerías re, json y matplotlib para esto.
+
+ El proyecto consiste en un repositorio llamado mal2csv que convierte los registros de servidores a formato CSV para facilitar su análisis.  Mediante un análisis parecido, se pretende obtener información importante acerca de los métodos utilizados en HTTP, las direcciones IP de los usuarios y las tendencias comunes en el tráfico de los servidores web.
+
+ Tarea completada.
+
+ Leer registros de archivos de log: Los logs de servidores guardan datos como direcciones IP, métodos HTTP (GET, POST, etc.) y la fecha en que se accedió, entre otros.
+
+ Se comenzó leyendo un archivo de log incorrecto. Necesitamos convertir las múltiples entradas en formato de texto plano de este archivo en un formato más organizado, como JSON.
+
+ Uso de patrones para buscar y manipular texto de forma precisa.
+
+ Se emplearon expresiones regulares para obtener la información importante.
+
+ Buscará direcciones IP que sigan el formato estándar de cuatro bloques de números (por ejemplo, 192.168.1.1).
+
+ Captura la fecha y hora en el formato de logs usual: 12/Mar/2024:13:44:55. Se compone de dos dígitos, tres letras, cuatro dígitos y tres grupos de dos dígitos separados por ":".
+
+ Este código detecta los métodos HTTP (GET, POST, PUT, DELETE) utilizados en las solicitudes.
+
+ Guardar información de manera organizada y accesible para su posterior uso.
+
+ Los datos se guardan en un archivo JSON para poder ser visualizados o analizados posteriormente con más detalle.
+
+ Creación de imágenes visuales.
+
+ Se usaron gráficos con matplotlib para estudiar los patrones en los logs.
+
+ Un gráfico de barras muestra cómo se distribuyen los métodos HTTP.
+
+ Un gráfico de barras muestra la cantidad de veces que cada dirección IP ha accedido a un determinado sitio web.
+
+ Uso de expresiones regulares.
+
+ Las expresiones regulares facilitan la búsqueda de patrones en los registros de texto de forma eficaz.
+
+ En esta situación: Una dirección IP identifica la ubicación desde la cual los usuarios están accediendo.
+
+ Extrae las fechas de las solicitudes de análisis de tendencias de tráfico.
+
+ Determina qué métodos HTTP son más utilizados al filtrar las solicitudes, como GET o POST.
+
+ Gráficos creados automáticamente.
+
+ La distribución de Métodos HTTP es la forma en que se utilizan y asignan los métodos de comunicación en la red.
+
+ En el gráfico se ve cuáles son los métodos HTTP más comunes en las solicitudes, como GET y POST. Es importante para saber qué tipo de interacción es más común en el servidor.
+
+ Número de veces que una dirección IP se conecta a un sistema o red en un período de tiempo determinado.
+
+ Muestra la cantidad de accesos realizados por cada dirección IP. Esto permite detectar comportamientos anómalos, como ataques DoS o varios intentos de acceso desde la misma dirección IP.
+
+ Explicación de las representaciones visuales.
+
+ Los métodos HTTP son acciones que se pueden realizar en una URL, como obtener información, enviar datos, eliminar recursos, entre otras. Cada método tiene una función específica y permite interactuar con el servidor de diferentes formas. Algunos de los métodos más comunes son GET, POST, PUT y DELETE.
+
+ La mayoría de las veces, las solicitudes suelen ser GET. Esto significa que los usuarios están pidiendo recursos al servidor, como páginas web o imágenes.
+
+ El método POST es comúnmente utilizado para enviar información a través de formularios o solicitudes de envío de datos.
+
+ Cantidad de veces que una dirección IP específica accede a un recurso en línea en un periodo de tiempo determinado.
+
+ Las direcciones IP que se encuentran con mayor frecuencia pueden estar relacionadas con bots, ataques automatizados o usuarios muy activos. Si una dirección IP se conecta repetidamente en poco tiempo, es posible que esté intentando abusar o explotar el servidor.
